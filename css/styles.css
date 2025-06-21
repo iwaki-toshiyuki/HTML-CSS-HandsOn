@@ -41,28 +41,100 @@ a {
 /*-------------------------------------------
   ヘッダー
   -------------------------------------------*/
+  .header {
+  display: flex; /* 横並び */
+  align-items: center; /*上下中央揃え*/
+  justify-content: space-between;/*両橋揃え*/
+  height: 80px;
+  width: 100%;
+}
+
+.header-logo {
+  height: 24px;
+}
+
+.header ul {
+  display: flex;
+  gap: 24px; /* 横並びの間隔 */
+}
+
+.header li a:hover {
+  opacity: 0.7;
+}
 
 
 /*-------------------------------------------
   メインビジュアル
   -------------------------------------------*/
-
+.main-visual {
+  width: 100%; /* 親要素の100% */
+  height: 640px;
+  object-fit: cover; /*領域いっぱいにしたいから */
+  border-radius: 16px; /*角っこを丸く */
+}
 
 /*-------------------------------------------
   セクション 共通部分
   -------------------------------------------*/
+.section {
+  display: flex;
+  flex-direction: column; /*「display:flex」と組み合わせると縦並びにできる*/
+  align-items: center; /* 左右中央揃え */
+  gap: 40px; /* 間隔をあける */
+}
 
+.section-title {
+  border-bottom: solid 1px #383e45; /*アンダーライン */
+}
 
 /* -------------------------------------------
   プロフィール
   -------------------------------------------*/
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* 綺麗なマルになる。 */
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
 /* -------------------------------------------
   記事
   -------------------------------------------*/
+.articles {
+  display: grid; /* 格子状に並べる */
+  grid-template-columns: 1fr 1fr 1fr; /* いくつ並べるか（今回でいうと、3つ並んだら折り返す) */
+  gap: 40px 16px; /* 一つ目　縦方向の間隔 二つ目　横方向の間隔 */
+}
 
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.article-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 
 /*-------------------------------------------
   フッター
   -------------------------------------------*/
+.footer {
+  font-size: small;
+  padding: 40px 0; /*一つ目　上下　二つ目　左右 */
+  text-align: center;
+}
